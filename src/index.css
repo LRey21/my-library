@@ -1,13 +1,46 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque&family=Tenor+Sans&display=swap');
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Darker Grotesque', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+p {
+  font-family: 'Darker Grotesque', sans-serif;
+  margin: 0;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+  margin: 0;
+  font-family: 'Tenor Sans', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 75px;
+  color: #25180B;
+  -webkit-font-smoothing: antialiased;
+}
+
+h3 {
+  margin: 0;
+  font-family: 'Tenor Sans', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 45px;
+  color: #25180B;
+  -webkit-font-smoothing: antialiased;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
