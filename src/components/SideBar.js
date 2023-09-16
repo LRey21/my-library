@@ -52,7 +52,7 @@ const SideBar = ({children}) => {
                     </div>
                 </div>
             </div>
-            <main>{children}</main>
+            <main style={{ width: '100%' }}>{children}</main>
         </div>
     )
 };
