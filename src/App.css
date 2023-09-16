@@ -39,6 +39,13 @@
   margin-top: 18px;
 }
 
+.icon {
+  color: #25180b;
+  width: 25px;
+  height: 25px;
+  margin-top: 18px;
+}
+
 .sidebar {
   display: flex; 
   flex-direction: column;
@@ -80,6 +87,10 @@
 
 .spacer {
   height: 5em;
+}
+
+.spacer-sm {
+  height: 3em;
 }
 
 div.card {
@@ -161,6 +172,33 @@ div.card {
   border-radius: 6px;
   font-weight: bold;
   color: #F9F7F6;
+}
+
+.view-btn {
+  height: 40px;
+  width: 30px;
+  margin: 0;
+  border: 0;
+  outline: none;
+  background-color: #F9F7F6 ;
+}
+.ok-btn {
+  background-color: #DED6D2 ;
+  border: 3px;
+  border-radius: 5px;
+  outline: none;
+  font-family: 'Darker Grotesque', sans-serif;
+  font-size: 20px;
+  width: 50px;
+}
+
+.book-cover {
+  width: 60px;
+  margin: 5px ;
+}
+
+.list-reading {
+  border-right: 1px solid #25180b; ;
 }
 
 @keyframes App-logo-spin {

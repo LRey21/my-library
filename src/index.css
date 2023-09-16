@@ -55,8 +55,28 @@ h3 {
   -webkit-font-smoothing: antialiased;
 }
 
+h5 {
+  margin: 0;
+  font-family: 'Tenor Sans', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 35px;
+  color: #25180B;
+  -webkit-font-smoothing: antialiased;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+li {
+  font-family: 'Darker Grotesque', sans-serif;
+  margin: 0;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+  list-style-type: none;
+  list-style-position: outside
 }
 
