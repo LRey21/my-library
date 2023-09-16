@@ -101,32 +101,14 @@ div.card {
   font-family: 'Darker Grotesque', sans-serif;
   line-height: 1.125em;
 }
-.react-calendar--doubleView {
-  width: 700px;
-}
-.react-calendar--doubleView .react-calendar__viewContainer {
-  display: flex;
-  margin: -0.5em;
-}
 .react-calendar--doubleView .react-calendar__viewContainer > * {
   width: 50%;
   margin: 0.5em;
-}
-.react-calendar,
-.react-calendar *,
-.react-calendar *:before,
-.react-calendar *:after {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
 }
 .react-calendar button {
   margin: 0;
   border: 0;
   outline: none;
-}
-.react-calendar button:enabled:hover {
-  cursor: pointer;
 }
 .react-calendar__navigation {
   display: flex;
@@ -139,13 +121,6 @@ div.card {
   background: none;
   font-size: 16px;
   margin-top: 8px;
-}
-.react-calendar__navigation button:disabled {
-  background-color: #F9F7F6;
-}
-.react-calendar__navigation button:enabled:hover,
-.react-calendar__navigation button:enabled:focus {
-  background-color: #DED6D2;
 }
 .react-calendar__month-view__weekdays {
   text-align: center;
