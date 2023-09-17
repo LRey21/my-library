@@ -224,6 +224,16 @@ div.card {
   right: 30px
 }
 
+.btn-timer {
+  background-color: #DED6D2 ;
+  border: 3px;
+  border-radius: 5px;
+  outline: none;
+  font-family: 'Darker Grotesque', sans-serif;
+  font-size: 20px;
+  width: 80px;
+}
+
 .book-cover {
   width: 60px;
   margin: 5px ;
