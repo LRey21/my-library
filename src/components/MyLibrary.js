@@ -34,7 +34,7 @@ const MyLibrary = ({ booksData }) => {
         </li>
       ));
     };
-
+    console.log(booksData);
     return (
         <div className="container-fluid mt-4">
           <div className="row">

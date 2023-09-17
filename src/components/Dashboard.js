@@ -9,11 +9,28 @@ import { my_books } from "./data/my_books";
 dayjs.locale('en');
 
 const Dashboard = () => {
-      
+    const booksData = my_books  
     const todayDate = dayjs().format('dddd, MMMM D');
-    const booksData = my_books;
     const [readingBooks, setReadingBooks] = useState([]);
     const [currentBookIndex, setCurrentBookIndex] = useState(0);
+    const [pages, setPages] = useState(booksData.pagesRead);
+
+    const handleOk = () => {
+        const updatedReadingBooks = [...readingBooks];
+        const updatedBook = updatedReadingBooks[currentBookIndex];
+        const newPagesValue = parseInt(document.querySelector('input[name="pages"]').value, 10) || 0; // Get the value from the input
+      
+        updatedBook.pagesRead += newPagesValue; 
+        updatedReadingBooks[currentBookIndex] = updatedBook;
+        setReadingBooks(updatedReadingBooks);
+      
+        document.querySelector('input[name="pages"]').value = '';
+      };
+      
+    const [bookData, setBookData] = useState(() => {
+        const storedData = localStorage.getItem("my_books");
+        return storedData ? JSON.parse(storedData) : [];
+    });
 
     useEffect(() =>{
         const reading = booksData.filter(book => book.status === 'reading');
@@ -59,13 +76,13 @@ const Dashboard = () => {
                             <p style={{ marginBottom: 3 }}>Today I read</p>
                             <div className="row align-items-center">
                                 <div className="col-sm-3">
-                                    <input className="form-control" type="number"/>
+                                    <input className="form-control" type="number" min="0" name="pages"/>
                                 </div>
                                 <div className="col mr-auto">
                                     <label className="col-form-label">Pages</label>
                                 </div>
                                 <div className="col-sm-3">
-                                    <input className="form-control" type="number"/>
+                                    <input className="form-control" type="number" min="0"/>
                                 </div>
                                 <div className="col mr-auto">
                                     <label className="col-form-label">Minutes</label>
@@ -79,7 +96,12 @@ const Dashboard = () => {
                             </div>
                         </div>
                         <div className="d-flex justify-content-end mt-2">
-                          <button className="ok-btn">Ok</button>
+                          <button 
+                            className="ok-btn"
+                            onSubmit={handleOk} 
+                          >
+                            Ok
+                          </button>
                         </div>
                         
                     </div>
@@ -92,6 +114,9 @@ const Dashboard = () => {
             <div className="spacer"></div>
             <div className="container">
                 <MyLibrary booksData={booksData}/>
+            </div>
+            <div className="spacer"></div>
+            <div className="container">
             </div>
         </div>
     )
